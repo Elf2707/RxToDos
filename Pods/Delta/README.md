@@ -1,117 +1,100 @@
-# Delta
+<img src="http://thoughtbot.github.io/Delta/delta-logo.png" width="200" />
 
-[![Build Status](https://img.shields.io/circleci/project/mogstad/delta.svg?style=flat-square)](https://circleci.com/gh/mogstad/delta)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Delta.svg?style=flat-square)](https://cocoapods.org/pods/Delta)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Handling animations and keeping track of changes manually can be very error-prone,
-it’s easy to make a mistake, and the code gets very hard to follow. Delta makes 
-it hassle-free to make sure this is right, and makes your app shine by using 
-animations. Your views will finally be a visual representation of your data.
+Managing state is hard. Delta aims to make it simple.
+
+Delta takes an app that has custom state management spread throughout all the VCs
+and simplifies it by providing a simple interface to change state and subscribe
+to its changes.
+
+It can be used standalone or with your choice of reactive framework
+plugged in. We recommend using a reactive framework to get the most value.
+
+## Source Compatibility ##
+
+The source on `master` assumes Swift 3.0
+
+## Framework Installation ##
+
+### [Carthage] ###
+
+[Carthage]: https://github.com/Carthage/Carthage
+
+```
+github "thoughtbot/Delta"
+```
+
+Then run `carthage update`.
+
+Follow the current instructions in [Carthage's README][carthage-installation]
+for up to date installation instructions.
+
+[carthage-installation]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+
+### [CocoaPods]
+
+[CocoaPods]: http://cocoapods.org
+
+Add the following to your [Podfile](http://guides.cocoapods.org/using/the-podfile.html):
+
+```ruby
+pod 'Delta', :git => "https://github.com/conqueror/Delta.git"
+```
+
+You also need to make sure you're opting into using frameworks:
+
+```ruby
+use_frameworks!
+```
+
+Then run `pod install` with CocoaPods 0.36 or newer.
+
+### Git Submodules
+
+Add this repo as a submodule, and add the project file to your workspace. You
+can then link against `Delta.framework` in your application target.
 
 ## Usage
 
-One of Delta’s unique features is that it can determine changes. This is done by
-checking equtablillity of the item and equatabillity of its identifier. If the
-identifier is the same, but the model is no longer equatable, Delta generates a
-change record which can be used to reload or manually update the cell.
+- [Getting Started]
+- [Using Reactive Extensions][Using RX]
+- [Example Application using Delta and ReactiveCocoa][Example Application]
+- [API Documentation]
 
-### Basic
+[Getting Started]: ./documentation/getting-started.md
+[Using RX]: ./documentation/reactive-extensions.md
+[API Documentation]: https://thoughtbot.github.io/Delta
+[Example Application]: https://github.com/thoughtbot/DeltaTodoExample
 
-To use Delta your view model needs to conform to the protocol `DeltaItem`.
+## Contributing
 
-```swift
-import Delta
+See the [CONTRIBUTING] document.
+Thank you, [contributors]!
 
-struct TaskListItem: DeltaItem, Equatable {
-  var deltaIdentifier: Int {
-    return self.model.identifier
-  }
-  var model: Task
-}
-
-func ==(lhs: TaskListItem, rhs: TaskListItem) -> Bool {
-  return lhs.model == rhs.model
-}
-```
-
-We can then figure out the difference between two ordered set of our models.
-
-```swift
-let records = generateItemRecords(
-  section: 0, 
-  from: from, 
-  to: to)
-```
-
-We can use those records to animate a table view or a collection view:
-
-```swift
-tableView.performUpdates(records)
-```
-
-### Sectioned Data Structures
-
-Delta also support generating records for sectioned data structure. As with
-items, Delta requires the section to conform to a protocol; `DeltaSection`. Each
-section has an identifier and an ordered set of items.
-
-```swift
-struct TaskListSection: DeltaSection {
-  var deltaIdentifier: Int
-  var items: TaskListItem
-}
-```
-
-Determining the change and animating the change:
-
-```swift
-let records = generateRecordsForSections(from: self.data, to: data)
-self.data = data
-collectionView.performUpdates(records)
-```
-
-### Update Callback
-
-The default behaviour when a change has occoured is to reload the cell. This
-isn’t always desirable, Delta therefor allows you to pass in an update callback,
-that will be invoked for each changed cell.
-
-```swift
-collectionView.performUpdates(records, update: { old, new in 
-  if let cell = self.collectionView.cellForItemAtIndexPath(old) as? MyCollectionViewCell {
-    cell.task = data[new.section].item[new.item]
-  }
-})
-```
-
-Note: due to internals in UITableView’s and UICollecitonView’s we need to query
-the cell using the old index path, and update its data from the new index path.
-
-## Install
-
-Delta will be compatible with the lastest public release of Swift. Older
-releases will be available, but bug fixes won’t be issued.
-
-### [Carthage](https://github.com/carthage/carthage)
-
-1. Add `github "mogstad/delta" ~> 3.0.0` to your “Cartfile”
-2. Run `carthage update`
-3. Link Delta with your target
-4. Add Delta to your copy framework script phase
-
-### [CocoaPods](https://cocoapods.org)
-
-Update your podfile:
-
-1. Add `use_frameworks!` to your pod file[^1]
-2. Add `pod "Delta", "~> 3.0.0"` to your application target
-3. Update your dependencies by running `pod install`
-
-[^1]: Swift can’t be included as a static library, therefor it’s required to add
-`use_frameworks!` to your `podfile`. It will then import your dependeices as
-dynamic frameworks.
+  [CONTRIBUTING]: CONTRIBUTING.md
+  [contributors]: https://github.com/thoughtbot/Delta/graphs/contributors
 
 ## License
 
-Delta is released under the MIT license. See LICENSE for details.
+Delta is Copyright (c) 2015 thoughtbot, inc.
+It is free software, and may be redistributed
+under the terms specified in the [LICENSE] file.
+
+  [LICENSE]: /LICENSE
+
+## About
+
+Delta is maintained by Jake Craige.
+
+![thoughtbot](https://thoughtbot.com/logo.png)
+
+Delta is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+We love open source software!
+See [our other projects][community]
+or [hire us][hire] to help build your product.
+
+  [community]: https://thoughtbot.com/community?utm_source=github
+  [hire]: https://thoughtbot.com/hire-us?utm_source=github

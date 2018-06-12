@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BCCEAC36F259ECDD56C05FD738B74C3B"
+               BlueprintIdentifier = "CA83D1F10551B44BE3EDEC5D5DCDBE02"
                BlueprintName = "Delta"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Delta.framework">

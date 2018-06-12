@@ -10,7 +10,7 @@ target 'RxToDo' do
   pod 'Argo'
   pod 'Curry'
   pod 'ReactiveCocoa'
-  pod 'Delta'
+  pod 'Delta', :git => "https://github.com/conqueror/Delta.git"
   
   target 'RxToDoTests' do
     inherit! :search_paths

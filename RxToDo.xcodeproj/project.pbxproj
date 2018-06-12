@@ -13,8 +13,25 @@
 		7183E5DB20CFF45A00539D92 /* RxToDosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5DA20CFF45A00539D92 /* RxToDosViewModel.swift */; };
 		7183E5DD20CFF7D400539D92 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5DC20CFF7D400539D92 /* WebServiceManager.swift */; };
 		7183E5DF20CFF80100539D92 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5DE20CFF80100539D92 /* Urls.swift */; };
+		7183E5E120D0326B00539D92 /* RxToDoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5E020D0326B00539D92 /* RxToDoManager.swift */; };
+		7183E5E320D0452A00539D92 /* ClearCompletedToDosAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5E220D0452A00539D92 /* ClearCompletedToDosAction.swift */; };
+		7183E5E520D0454500539D92 /* CreateToDoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5E420D0454500539D92 /* CreateToDoAction.swift */; };
+		7183E5E720D0455B00539D92 /* DeleteToDoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5E620D0455B00539D92 /* DeleteToDoAction.swift */; };
+		7183E5E920D0457600539D92 /* SetFilterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5E820D0457600539D92 /* SetFilterAction.swift */; };
+		7183E5EB20D0459200539D92 /* ToggleCompletedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5EA20D0459200539D92 /* ToggleCompletedAction.swift */; };
+		7183E5ED20D045AD00539D92 /* LoadToDosAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5EC20D045AD00539D92 /* LoadToDosAction.swift */; };
+		7183E5EF20D045D400539D92 /* DatailsToDoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5EE20D045D400539D92 /* DatailsToDoAction.swift */; };
+		7183E5F120D045EE00539D92 /* UpdateToDoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5F020D045EE00539D92 /* UpdateToDoAction.swift */; };
+		7183E5F320D0461300539D92 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5F220D0461300539D92 /* DetailsViewController.swift */; };
+		7183E5F520D0462C00539D92 /* ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5F420D0462C00539D92 /* ReactiveCocoa.swift */; };
+		7183E5F720D0466800539D92 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5F620D0466800539D92 /* RequestProtocol.swift */; };
+		7183E5F920D0469A00539D92 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5F820D0469A00539D92 /* State.swift */; };
+		7183E5FC20D046D300539D92 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5FB20D046D300539D92 /* Store.swift */; };
+		7183E5FE20D046E300539D92 /* StoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5FD20D046E300539D92 /* StoreExtensions.swift */; };
+		7183E60020D0471200539D92 /* RxToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E5FF20D0471200539D92 /* RxToDoTableViewCell.swift */; };
+		7183E60220D0472500539D92 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E60120D0472500539D92 /* FooterView.swift */; };
 		71907F9020CDD966001D4FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71907F8F20CDD966001D4FE3 /* AppDelegate.swift */; };
-		71907F9220CDD966001D4FE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71907F9120CDD966001D4FE3 /* ViewController.swift */; };
+		71907F9220CDD966001D4FE3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71907F9120CDD966001D4FE3 /* MainViewController.swift */; };
 		71907F9520CDD966001D4FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71907F9320CDD966001D4FE3 /* Main.storyboard */; };
 		71907F9720CDD967001D4FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71907F9620CDD967001D4FE3 /* Assets.xcassets */; };
 		71907F9A20CDD967001D4FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71907F9820CDD967001D4FE3 /* LaunchScreen.storyboard */; };
@@ -50,9 +67,26 @@
 		7183E5DA20CFF45A00539D92 /* RxToDosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxToDosViewModel.swift; sourceTree = "<group>"; };
 		7183E5DC20CFF7D400539D92 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		7183E5DE20CFF80100539D92 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		7183E5E020D0326B00539D92 /* RxToDoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxToDoManager.swift; sourceTree = "<group>"; };
+		7183E5E220D0452A00539D92 /* ClearCompletedToDosAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCompletedToDosAction.swift; sourceTree = "<group>"; };
+		7183E5E420D0454500539D92 /* CreateToDoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoAction.swift; sourceTree = "<group>"; };
+		7183E5E620D0455B00539D92 /* DeleteToDoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteToDoAction.swift; sourceTree = "<group>"; };
+		7183E5E820D0457600539D92 /* SetFilterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFilterAction.swift; sourceTree = "<group>"; };
+		7183E5EA20D0459200539D92 /* ToggleCompletedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleCompletedAction.swift; sourceTree = "<group>"; };
+		7183E5EC20D045AD00539D92 /* LoadToDosAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadToDosAction.swift; sourceTree = "<group>"; };
+		7183E5EE20D045D400539D92 /* DatailsToDoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatailsToDoAction.swift; sourceTree = "<group>"; };
+		7183E5F020D045EE00539D92 /* UpdateToDoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateToDoAction.swift; sourceTree = "<group>"; };
+		7183E5F220D0461300539D92 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		7183E5F420D0462C00539D92 /* ReactiveCocoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCocoa.swift; sourceTree = "<group>"; };
+		7183E5F620D0466800539D92 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		7183E5F820D0469A00539D92 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		7183E5FB20D046D300539D92 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7183E5FD20D046E300539D92 /* StoreExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreExtensions.swift; sourceTree = "<group>"; };
+		7183E5FF20D0471200539D92 /* RxToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxToDoTableViewCell.swift; sourceTree = "<group>"; };
+		7183E60120D0472500539D92 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		71907F8C20CDD966001D4FE3 /* RxToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71907F8F20CDD966001D4FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71907F9120CDD966001D4FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71907F9120CDD966001D4FE3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71907F9420CDD966001D4FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71907F9620CDD967001D4FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71907F9920CDD967001D4FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7183E5FA20D046B600539D92 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				7183E5FB20D046D300539D92 /* Store.swift */,
+				7183E5FD20D046E300539D92 /* StoreExtensions.swift */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
 		71907F8320CDD966001D4FE3 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +167,7 @@
 		71907F8E20CDD966001D4FE3 /* RxToDo */ = {
 			isa = PBXGroup;
 			children = (
+				7183E5FA20D046B600539D92 /* Store */,
 				71E6894A20CFC429007D50D0 /* Communication */,
 				71E6894320CFC428007D50D0 /* Controllers */,
 				71E6894720CFC429007D50D0 /* Extensions */,
@@ -163,6 +207,14 @@
 		71E6894220CFC413007D50D0 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				7183E5E220D0452A00539D92 /* ClearCompletedToDosAction.swift */,
+				7183E5E420D0454500539D92 /* CreateToDoAction.swift */,
+				7183E5E620D0455B00539D92 /* DeleteToDoAction.swift */,
+				7183E5E820D0457600539D92 /* SetFilterAction.swift */,
+				7183E5EA20D0459200539D92 /* ToggleCompletedAction.swift */,
+				7183E5EC20D045AD00539D92 /* LoadToDosAction.swift */,
+				7183E5EE20D045D400539D92 /* DatailsToDoAction.swift */,
+				7183E5F020D045EE00539D92 /* UpdateToDoAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -170,7 +222,8 @@
 		71E6894320CFC428007D50D0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				71907F9120CDD966001D4FE3 /* ViewController.swift */,
+				71907F9120CDD966001D4FE3 /* MainViewController.swift */,
+				7183E5F220D0461300539D92 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +234,7 @@
 				71E6894B20CFC51E007D50D0 /* RxToDo.swift */,
 				7183E5D820CFF40800539D92 /* RxToDoViewModel.swift */,
 				7183E5DA20CFF45A00539D92 /* RxToDosViewModel.swift */,
+				7183E5F620D0466800539D92 /* RequestProtocol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +242,7 @@
 		71E6894520CFC428007D50D0 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7183E5E020D0326B00539D92 /* RxToDoManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -195,6 +250,8 @@
 		71E6894620CFC428007D50D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7183E5FF20D0471200539D92 /* RxToDoTableViewCell.swift */,
+				7183E60120D0472500539D92 /* FooterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +259,7 @@
 		71E6894720CFC429007D50D0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7183E5F420D0462C00539D92 /* ReactiveCocoa.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +274,7 @@
 		71E6894920CFC429007D50D0 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				7183E5F820D0469A00539D92 /* State.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -476,13 +535,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7183E5FC20D046D300539D92 /* Store.swift in Sources */,
 				7183E5D920CFF40800539D92 /* RxToDoViewModel.swift in Sources */,
+				7183E5E520D0454500539D92 /* CreateToDoAction.swift in Sources */,
+				7183E5EB20D0459200539D92 /* ToggleCompletedAction.swift in Sources */,
+				7183E5F920D0469A00539D92 /* State.swift in Sources */,
+				7183E5E320D0452A00539D92 /* ClearCompletedToDosAction.swift in Sources */,
+				7183E5E120D0326B00539D92 /* RxToDoManager.swift in Sources */,
+				7183E5E920D0457600539D92 /* SetFilterAction.swift in Sources */,
+				7183E5F520D0462C00539D92 /* ReactiveCocoa.swift in Sources */,
 				71E6894C20CFC51E007D50D0 /* RxToDo.swift in Sources */,
 				7183E5DD20CFF7D400539D92 /* WebServiceManager.swift in Sources */,
+				7183E5F120D045EE00539D92 /* UpdateToDoAction.swift in Sources */,
+				7183E60020D0471200539D92 /* RxToDoTableViewCell.swift in Sources */,
+				7183E5F320D0461300539D92 /* DetailsViewController.swift in Sources */,
 				7183E5DB20CFF45A00539D92 /* RxToDosViewModel.swift in Sources */,
-				71907F9220CDD966001D4FE3 /* ViewController.swift in Sources */,
+				7183E5EF20D045D400539D92 /* DatailsToDoAction.swift in Sources */,
+				71907F9220CDD966001D4FE3 /* MainViewController.swift in Sources */,
+				7183E5F720D0466800539D92 /* RequestProtocol.swift in Sources */,
+				7183E5E720D0455B00539D92 /* DeleteToDoAction.swift in Sources */,
 				7183E5DF20CFF80100539D92 /* Urls.swift in Sources */,
+				7183E5FE20D046E300539D92 /* StoreExtensions.swift in Sources */,
+				7183E60220D0472500539D92 /* FooterView.swift in Sources */,
 				71907F9020CDD966001D4FE3 /* AppDelegate.swift in Sources */,
+				7183E5ED20D045AD00539D92 /* LoadToDosAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
